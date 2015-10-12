@@ -1,0 +1,11 @@
+{
+  "name": "egypt_legislations_scraping",
+  "version": "1.0.0",
+  "description": "Egypt Legislations cc.gov.eg scraping",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "M.Mahrous <m.mahrous.94@gmail.com>",
+  "license": "ISC"
+}
