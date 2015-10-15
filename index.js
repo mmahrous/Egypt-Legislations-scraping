@@ -7,15 +7,21 @@ var driver = new webdriver.Builder()
     .forBrowser('firefox')
     .build();
 var page;
+	y = 21; 
 driver.get('http://www.cc.gov.eg/Legislations/Egypt_Legislations.aspx');
-for (var i = 2; i <= 21; i++) {
+while(y < 420){ // go to the range of start page
+	page= "javascript:__doPostBack(\'ctl00$MainContent$GridView1\',\'Page$"+y+"\')";
+	driver.findElement(By.css('[href^="'+page+'"]')).click();
+	y+=20;
+};
+for (var i = 407; i <= 2000; i++) { // start page
 	page= "javascript:__doPostBack(\'ctl00$MainContent$GridView1\',\'Page$"+i+"\')";
 	driver.findElement(By.css('[href^="'+page+'"]')).click();
 	driver.executeScript(function() {
 	    return document.querySelector('html').innerHTML;
 	  }).then(function(innerHTML) {
-	  	var k = Math.abs((i--)-23);
-	  	fs.writeFile("./pages/page"+ k +".html", innerHTML, function(err) {
+	  	var k = Math.abs((i--)-2000-408); //start page +1 
+	  	fs.writeFile("../pages/page"+ k +".html", innerHTML, function(err) {
 		    if(err) {
 		        return console.log(err);
 		    }
@@ -24,4 +30,3 @@ for (var i = 2; i <= 21; i++) {
 	  });
 };
 
-//driver.quit();
