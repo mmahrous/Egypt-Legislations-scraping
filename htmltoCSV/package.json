@@ -1,0 +1,19 @@
+{
+  "name": "html-to-csv",
+  "version": "1.0.0",
+  "description": "converting html pages from cc.gov.eg to csv with all the legislations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmahrous/Egypt-Legislations-scraping"
+  },
+  "author": "M.Mahrous <m.mahrous.94@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmahrous/Egypt-Legislations-scraping/issues"
+  },
+  "homepage": "https://github.com/mmahrous/Egypt-Legislations-scraping"
+}
